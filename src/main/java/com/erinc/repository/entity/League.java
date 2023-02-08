@@ -17,5 +17,15 @@ public class League {
     private String name;
     private String league_level;
     @OneToMany(mappedBy = "league")
+
     private List<Club> clubList;
+
+    @Override
+    public String toString() {
+        return "League{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", league_level='" + league_level + '\'' +
+                '}';
+    }
 }

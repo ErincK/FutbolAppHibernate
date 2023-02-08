@@ -12,10 +12,10 @@ import javax.persistence.Embeddable;
 @AllArgsConstructor
 
 public class Attacking {
-    private Integer attacking_crossing;
-    private Integer  attacking_finishing;
-    private Integer  attacking_heading_accuracy;
-    private Integer  attacking_short_passing;
-    private Integer  attacking_volleys;
+    private int attacking_crossing;
+    private int  attacking_finishing;
+    private int  attacking_heading_accuracy;
+    private int  attacking_short_passing;
+    private int  attacking_volleys;
 
 }

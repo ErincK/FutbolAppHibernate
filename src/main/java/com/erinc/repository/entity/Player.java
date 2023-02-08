@@ -3,6 +3,8 @@ package com.erinc.repository.entity;
 
 import com.erinc.repository.entity.embeded.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
+import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
@@ -11,12 +13,13 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-public class Player {
+public class Player{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
     private String long_name;
-    private String player_position;
+    @Enumerated(EnumType.STRING)
+    PlayerPosition player_position;
     private int overall_potential;
     private double value_eur;
     private double wage_eur;
@@ -35,19 +38,28 @@ public class Player {
     private int defending;
     private int physic;
     @Embedded
-    Attacking attacking;
+    @Builder.Default
+    Attacking attacking = Attacking.builder().build();
     @Embedded
-    Defending defence;
+    @Builder.Default
+    Defending defence = Defending.builder().build();
     @Embedded
-    Golkepping golkepping;
+    @Builder.Default
+    Golkepping golkepping = Golkepping.builder().build();
     @Embedded
-    Mentality mentality;
+    @Builder.Default
+    Mentality mentality = Mentality.builder().build();
     @Embedded
-    Movement movement;
+    @Builder.Default
+    Movement movement = Movement.builder().build();
     @Embedded
-    Power power;
+    @Builder.Default
+    Power power = Power.builder().build();
     @Embedded
-    Skill skill;
-    @ManyToOne(cascade = CascadeType.ALL)
+    @Builder.Default
+    Skill skill = Skill.builder().build();
+    @ManyToOne()
+    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
     private Club club;
+
 }

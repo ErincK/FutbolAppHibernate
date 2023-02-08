@@ -13,9 +13,9 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Defending {
-    private Integer defending_marking_awareness;
-    private Integer defending_standing_tackle;
-    private Integer defending_sliding_tackle;
+    private int defending_marking_awareness;
+    private int defending_standing_tackle;
+    private int defending_sliding_tackle;
 
 
 }

@@ -11,4 +11,8 @@ public class LeagueController {
     public void createLeague(League league){
         this.leagueService.save(league);
     }
+
+    public void deleteById(Long id){
+        leagueService.deleteById(id);
+    }
 }

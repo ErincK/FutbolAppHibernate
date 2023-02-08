@@ -13,12 +13,12 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Golkepping {
-    private Integer goalkeeping_diving;
-    private Integer goalkeeping_handling;
-    private Integer goalkeeping_kicking;
-    private Integer goalkeeping_positioning;
-    private Integer goalkeeping_reflexes;
-    private Integer goalkeeping_speed;
+    private int goalkeeping_diving;
+    private int goalkeeping_handling;
+    private int goalkeeping_kicking;
+    private int goalkeeping_positioning;
+    private int goalkeeping_reflexes;
+    private int goalkeeping_speed;
 
 
 }

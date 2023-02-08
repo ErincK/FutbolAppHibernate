@@ -13,10 +13,10 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Power {
-    private Integer power_shot_power;
-    private Integer power_jumping;
-    private Integer power_stamina;
-    private Integer power_strength;
-    private Integer power_long_shots;
+    private int power_shot_power;
+    private int power_jumping;
+    private int power_stamina;
+    private int power_strength;
+    private int power_long_shots;
 
 }

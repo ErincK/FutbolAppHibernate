@@ -13,9 +13,9 @@ import javax.persistence.Embeddable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Skill {
-    private Integer skill_dribbling;
-    private Integer skill_curve;
-    private Integer skill_fk_accuracy;
-    private Integer skill_long_passing;
-    private Integer skill_ball_control;
+    private int skill_dribbling;
+    private int skill_curve;
+    private int skill_fk_accuracy;
+    private int skill_long_passing;
+    private int skill_ball_control;
 }
