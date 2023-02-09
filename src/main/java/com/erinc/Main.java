@@ -43,23 +43,7 @@ public class Main {
 //        playerController.createPlayers(List.of(player,player2,player3));
 //
 //        playerController.findAll().forEach(System.out::println);
-        List<List<String>> newList = new ArrayList<>();
-        try {
 
-            BufferedReader bufferedReader = new BufferedReader(new FileReader("C:/Users/MONSTER/OneDrive/Masaüstü/Java-6/superlig7.csv", StandardCharsets.UTF_8));
-            String line = "";
-
-            while ((line = bufferedReader.readLine()) != null) {
-
-                newList.add(Arrays.asList(line.split(";")));
-            }
-        }catch (FileNotFoundException e){
-            throw new RuntimeException(e);
-        }catch (IOException e){
-            throw new RuntimeException(e);
-        }
-
-        System.out.println(newList.get(1).get(0));
 
 
 

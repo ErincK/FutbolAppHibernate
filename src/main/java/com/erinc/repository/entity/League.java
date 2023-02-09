@@ -14,8 +14,8 @@ public class League {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String league_level;
+    private String league_name;
+    private int league_level;
     @OneToMany(mappedBy = "league")
 
     private List<Club> clubList;
@@ -24,7 +24,7 @@ public class League {
     public String toString() {
         return "League{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", league_name='" + league_name + '\'' +
                 ", league_level='" + league_level + '\'' +
                 '}';
     }

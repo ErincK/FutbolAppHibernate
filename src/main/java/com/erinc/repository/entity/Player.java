@@ -20,7 +20,8 @@ public class Player{
     private String long_name;
     @Enumerated(EnumType.STRING)
     PlayerPosition player_position;
-    private int overall_potential;
+    private int overall;
+    private int potential;
     private double value_eur;
     private double wage_eur;
     private int age;
@@ -45,7 +46,7 @@ public class Player{
     Defending defence = Defending.builder().build();
     @Embedded
     @Builder.Default
-    Golkepping golkepping = Golkepping.builder().build();
+    Golkepping golkeeping = Golkepping.builder().build();
     @Embedded
     @Builder.Default
     Mentality mentality = Mentality.builder().build();
@@ -59,7 +60,7 @@ public class Player{
     @Builder.Default
     Skill skill = Skill.builder().build();
     @ManyToOne()
-    @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
+    @Cascade({org.hibernate.annotations.CascadeType.PERSIST})
     private Club club;
 
 }
