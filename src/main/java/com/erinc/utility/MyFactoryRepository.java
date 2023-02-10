@@ -1,5 +1,6 @@
 package com.erinc.utility;
 
+import lombok.Getter;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -12,7 +13,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
+@Getter
 public class MyFactoryRepository<T, ID> implements ICrud<T, ID> {
 
     private EntityManager entityManager;

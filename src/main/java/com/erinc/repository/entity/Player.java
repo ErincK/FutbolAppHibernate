@@ -13,6 +13,9 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@NamedQueries({
+        @NamedQuery(name = "findByPosition", query = "SELECT p FROM Player p WHERE p.player_position = :position")
+})
 public class Player{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

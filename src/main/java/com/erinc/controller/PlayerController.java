@@ -33,4 +33,16 @@ public class PlayerController {
     public List<Player> findAll() {
        return playerService.findAll();
     }
+
+    public List<Player> findAllByPositionName(String nextLine){
+        return playerService.findAllByPositionName(nextLine);
+    }
+
+    public List<Player> findByMidfilderPlayer() {
+        return playerService.findByMidfilderPlayer();
+    }
+
+    public List<Player> findByArea(String area){
+        return playerService.findByArea(area);
+    }
 }

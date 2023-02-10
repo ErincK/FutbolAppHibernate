@@ -17,7 +17,7 @@ public class Club {
     private Long id;
     private String club_name;
     @OneToMany(mappedBy = "club")
-    private List<Player> playerList;
+    private List<Player> players;
     @ManyToOne()
     @Cascade({org.hibernate.annotations.CascadeType.SAVE_UPDATE})
 

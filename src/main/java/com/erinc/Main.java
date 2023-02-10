@@ -17,6 +17,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException, FileNotFoundException {
@@ -44,8 +45,9 @@ public class Main {
 //
 //        playerController.findAll().forEach(System.out::println);
 
-
-
+        System.out.println(PlayerPosition.CM.getArea());
+        List<PlayerPosition> ps = Arrays.asList(PlayerPosition.values()).stream().filter(x->x.getArea().equals("Middle")).collect(Collectors.toList());
+        ps.forEach(System.out::println);
 
 
     }
